@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="AddDataItem.png" />
-    <Resource Include="ButterflyGraphMode.png" />
+    <Resource Include="Assets\AddDataItem.png" />
+    <Resource Include="Assets\ButterflyGraphMode.png" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFGraphX"
         mc:Ignorable="d"
-        Title="BlogPostWindow" Height="450" Width="800" Icon="/AddDataItem.png" WindowStartupLocation="CenterOwner">
+        Title="BlogPostWindow" Height="450" Width="800" Icon="/Assets/AddDataItem.png" WindowStartupLocation="CenterOwner">
     <DockPanel>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" Margin="8" Height="28">
             <Button x:Name="LoadButton" Width="100" Content="Load" Click="LoadButton_Click"/>

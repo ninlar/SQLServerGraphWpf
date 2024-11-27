@@ -8,7 +8,7 @@
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:local="clr-namespace:WPFGraphX"
         mc:Ignorable="d"
-        Title="SQL Server Graph Demo" Height="450" Width="800" Loaded="Window_Loaded" Icon="/ButterflyGraphMode.png">
+        Title="SQL Server Graph Demo" Height="450" Width="800" Loaded="Window_Loaded" Icon="/Assets/ButterflyGraphMode.png">
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
             <Button x:Name="LoadGraph" Click="LoadGraph_Click">
