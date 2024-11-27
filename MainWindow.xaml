@@ -1,0 +1,79 @@
+﻿<Window x:Name="MainDialog" x:Class="WPFGraphX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfcoregraphcontrol="clr-namespace:Microsoft.Msagl.WpfGraphControl;assembly=Microsoft.Msagl.WpfGraphControl"
+        xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:local="clr-namespace:WPFGraphX"
+        mc:Ignorable="d"
+        Title="SQL Server Graph Demo" Height="450" Width="800" Loaded="Window_Loaded" Icon="/ButterflyGraphMode.png">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button x:Name="LoadGraph" Click="LoadGraph_Click">
+                <Viewbox Width="16 " Height="16" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib">
+                    <Rectangle Width="16 " Height="16">
+                        <Rectangle.Resources>
+                            <SolidColorBrush x:Key="canvas" Opacity="0" />
+                            <SolidColorBrush x:Key="light-defaultgrey" Color="#212121" Opacity="1" />
+                            <SolidColorBrush x:Key="light-defaultgrey-10" Color="#212121" Opacity="0.1" />
+                            <System:Double x:Key="cls-1">0.5</System:Double>
+                        </Rectangle.Resources>
+                        <Rectangle.Fill>
+                            <DrawingBrush Stretch="None">
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup x:Name="canvas">
+                                            <GeometryDrawing Brush="{DynamicResource canvas}" Geometry="F1M16,16H0V0H16Z" />
+                                        </DrawingGroup>
+                                        <DrawingGroup x:Name="level_1">
+                                            <DrawingGroup Opacity="{DynamicResource cls-1}">
+                                                <GeometryDrawing Brush="{DynamicResource light-defaultgrey}" Geometry="F1M6.646,7.646l.708.708-4,4-.708-.708ZM3,7V8H6V7Zm9,1V7H9.707l3.647-3.646-.708-.708-4,4L9,7V8l-.354.354,4,4,.708-.708L9.707,8ZM2.646,3.354l4,4,.708-.708-4-4Z" />
+                                            </DrawingGroup>
+                                            <GeometryDrawing Brush="{DynamicResource light-defaultgrey-10}" Geometry="F1M6.5,6.5h3v2h-3Zm-5-3h2v-2h-2Zm11-2v2h2v-2Zm-11,7h2v-2h-2Zm0,5h2v-2h-2Zm11,0h2v-2h-2Zm0-5h2v-2h-2Z" />
+                                            <GeometryDrawing Brush="{DynamicResource light-defaultgrey}" Geometry="F1M1.5,1,1,1.5v2l.5.5h2L4,3.5v-2L3.5,1ZM3,3H2V2H3ZM14.5,1h-2l-.5.5v2l.5.5h2l.5-.5v-2ZM14,3H13V2h1ZM1.5,6,1,6.5v2l.5.5h2L4,8.5v-2L3.5,6ZM3,8H2V7H3ZM6.5,6,6,6.5v2l.5.5h3l.5-.5v-2L9.5,6ZM9,8H7V7H9Zm3.5-2-.5.5v2l.5.5h2l.5-.5v-2L14.5,6ZM14,8H13V7h1ZM1.5,11l-.5.5v2l.5.5h2l.5-.5v-2L3.5,11ZM3,13H2V12H3Zm9.5-2-.5.5v2l.5.5h2l.5-.5v-2l-.5-.5ZM14,13H13V12h1Z" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+            <Button x:Name="ShowGridButton" Click="ShowGridButton_Click">
+                <Viewbox Width="16 " Height="16" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib">
+                    <Rectangle Width="16 " Height="16">
+                        <Rectangle.Resources>
+                            <SolidColorBrush x:Key="canvas" Opacity="0" />
+                            <SolidColorBrush x:Key="light-defaultgrey-10" Color="#212121" Opacity="0.1" />
+                            <SolidColorBrush x:Key="light-defaultgrey" Color="#212121" Opacity="1" />
+                            <SolidColorBrush x:Key="light-lightblue-10" Color="#0077a0" Opacity="0.1" />
+                            <SolidColorBrush x:Key="light-lightblue" Color="#0077a0" Opacity="1" />
+                            <SolidColorBrush x:Key="light-green" Color="#1f801f" Opacity="1" />
+                        </Rectangle.Resources>
+                        <Rectangle.Fill>
+                            <DrawingBrush Stretch="None">
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup x:Name="canvas2">
+                                            <GeometryDrawing Brush="{DynamicResource canvas}" Geometry="F1M16,16H0V0H16Z" />
+                                        </DrawingGroup>
+                                        <DrawingGroup x:Name="level_2">
+                                            <GeometryDrawing Brush="{DynamicResource light-defaultgrey-10}" Geometry="F1M9.5,15.5h-6v-5h6Z" />
+                                            <GeometryDrawing Brush="{DynamicResource light-defaultgrey}" Geometry="F1M9.5,16h-6L3,15.5v-5l.5-.5h6l.5.5v5ZM4,15H9V11H4Z" />
+                                            <GeometryDrawing Brush="{DynamicResource light-lightblue-10}" Geometry="F1M15.5,4.97V13c0,.828-1.791,1.5-4,1.5-.171,0-.334-.011-.5-.019V10.086L9.914,9H7.5V6H8V4.258a6.677,6.677,0,0,1,3.5-.788C13.709,3.47,15.5,4.142,15.5,4.97Z" />
+                                            <GeometryDrawing Brush="{DynamicResource light-lightblue}" Geometry="F1M16,4.97V13c0,1.313-2.264,2-4.5,2-.167,0-.333-.012-.5-.019v-1c.164.008.323.019.5.019,2.273,0,3.5-.71,3.5-1V6.261a7.863,7.863,0,0,1-3.5.709A7.863,7.863,0,0,1,8,6.261V9H7V5H8V4.97c0,.29,1.227,1,3.5,1s3.5-.71,3.5-1-1.227-1-3.5-1S8,4.68,8,4.97V3.688C10.337,2.461,16,2.884,16,4.97Z" />
+                                            <GeometryDrawing Brush="{DynamicResource light-green}" Geometry="F1M7,4H4V7H3V4H0V3H3V0H4V3H7Z" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+        </ToolBar>
+        <wpfcoregraphcontrol:AutomaticGraphLayoutControl x:Name="graphControl" MouseDoubleClick="graphControl_MouseDoubleClick" />
+    </DockPanel>
+</Window>
